@@ -20,6 +20,9 @@ export default async function Page({
     page?: string;
   };
 }) {
+  await new Promise((resolve) => setTimeout(resolve, 5000));
+  console.log('5 seconds completed');
+
   const query = searchParams?.query || '';
   const currentPage = Number(searchParams?.page) || 1;
 
