@@ -16,6 +16,9 @@ export const metadata: Metadata = {
 };
 
 export default async function Page() {
+  await new Promise((resolve) => setTimeout(resolve, 5000));
+  console.log('5 seconds completed in dashboard');
+  
   return (
     <main>
       <h1 className={`${lusitana.className} mb-4 text-xl md:text-2xl`}>
